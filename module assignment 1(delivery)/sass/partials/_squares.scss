@@ -1,0 +1,60 @@
+.squares {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 220px);
+    margin: 2rem 1rem;
+    grid-gap: 1.5rem;
+    justify-content: center;
+
+    &__item {
+        border-radius: 100%;
+        border: 2px solid getColour(dark-grey);
+        padding-top: 100%;
+        background: white;
+        position: relative;
+
+        &:before, %square-item-before {
+            content: "White";
+            position: absolute;
+            color: getColour(dark-grey);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 0.9rem;
+        }
+
+        &--lightgrey {
+            @extend .squares__item;
+            background: getColour(secondary);
+            border: none;
+
+            &:before {
+                @extend %square-item-before;
+                content: "lightgrey";
+                color: white;
+            }
+        }
+
+        &--pink {
+            @extend .squares__item;
+            border: none;
+            background: getColour(primary);
+
+            &:before {
+                @extend %square-item-before;
+                content: "Pink";
+                color: white;
+            }
+        }
+        &--white {
+            @extend .squares__item;
+            border: none;
+            background: getColour(primary);
+
+            &:before {
+                @extend %square-item-before;
+                content: "Pink";
+                color: white;
+            }
+        }
+    }
+}

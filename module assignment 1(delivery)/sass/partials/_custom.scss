@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;700&family=Julius+Sans+One&display=swap");
+
+// customise Bootstrap variables
+$primary: #C32C72;
+$dark: #F4F3EE;
+$navbar-dark-color: white;
+$navbar-dark-active-color: $primary;
+
+// custom variables
+$background-colour: #E5E5E5;
+$background-dark: rgba(0, 0, 0, 0.5);
+$grey: #d9d9d9;
+
+$tablet-width: 480px;
+
+$font-primary: "Archivo Narrow", sans-serif;
+$font-secondary: "Julius Sans One", sans-serif;
+
+@function getColour($colour) {
+    @return map-get($colours, $colour);
+}
